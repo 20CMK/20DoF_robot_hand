@@ -1,0 +1,211 @@
+hproject_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  joint_pinky_lateral_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_pinky_lateral_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_pinky_MCP_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_pinky_MCP_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_pinky_PIP_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_pinky_PIP_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_pinky_DIP_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_pinky_DIP_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  jonit_pinky_lateral_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jonit_pinky_lateral_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_pinky_MCP_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_pinky_MCP_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_pinky_PIP_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_pinky_PIP_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_pinky_DIP_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_pinky_DIP_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_ring_lateral_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_ring_lateral_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  jonit_ring_MCP_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jonit_ring_MCP_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_ring_PIP_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_ring_PIP_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_ring_DIP_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_ring_DIP_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_ring_lateral_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_ring_lateral_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_ring_MCP_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_ring_MCP_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  jonint_ring_PIP_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jonint_ring_PIP_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_ring_DIP_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_ring_DIP_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_middle_lateral_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_middle_lateral_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_middle_MCP_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_middle_MCP_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_middle_PIP_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_middle_PIP_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_middle_DIP_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_middle_DIP_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_middle_lateral_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_middle_lateral_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_middle_MCP_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_middle_MCP_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_middle_PIP_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_middle_PIP_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_middle_DIP_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_middle_DIP_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_index_lateral_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_index_lateral_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_index_MCP_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_index_MCP_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_index_PIP_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_index_PIP_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_index_DIP_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_index_DIP_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_index_lateral_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_index_lateral_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_index_MCP_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_index_MCP_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_index_PIP_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_index_PIP_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_index_DIP_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_index_DIP_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_thumb_lateral_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_thumb_lateral_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_thumb_MCP_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_thumb_MCP_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_thumb_IP_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_thumb_IP_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_thumb_lateral_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_thumb_lateral_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_thumb_MCP_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_thumb_MCP_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_thumb_IP_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_thumb_IP_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_shoulder_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_shoulder_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_shoulder_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_shoulder_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_elbow_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_elbow_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_elbow_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_elbow_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_wrist_1_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_wrist_1_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_wrist_1_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_wrist_1_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_wrist_2_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_wrist_2_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_wrist_2_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_wrist_2_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_wheel_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_wheel_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_wheel_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_wheel_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_ball_L_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_ball_L
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_ball_R_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_ball_R
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint_lidar_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_lidar
+    pid: {p: 100.0, i: 0.01, d: 10.0}

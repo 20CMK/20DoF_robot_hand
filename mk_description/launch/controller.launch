@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find mk_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="mk" args="joint1_position_controller joint2_position_controller joint3_position_controller joint4_position_controller joint5_position_controller joint6_position_controller joint_index_RT_position_controller joint_middle_RT_position_controller joint_ring_RT_position_controller joint_pinky_RT_position_controller joint_index_MCP_position_controller joint_index_PIP_position_controller joint_index_DIP_position_controller joint_middle_MCP_position_controller joint_middle_PIP_position_controller joint_middle_DIP_position_controller joint_ring_MCP_position_controller joint_ring_PIP_position_controller joint_ring_DIP_position_controller joint_pinky_MCP_position_controller joint_pinky_PIP_position_controller joint_pinky_DIP_position_controller joint_thumb_CMC_1_position_controller joint_thumb_CMC_2_position_controller joint_thumb_MP_position_controller joint_thumb_IP_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/mk/joint_states"/>
+</node>
+
+</launch>

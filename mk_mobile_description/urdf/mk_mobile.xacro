@@ -1,0 +1,598 @@
+<?xml version="1.0" ?>
+<robot name="mk_mobile" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find mk_mobile_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find mk_mobile_description)/urdf/mk_mobile.trans" />
+<xacro:include filename="$(find mk_mobile_description)/urdf/mk_mobile.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.10507029952866492 3.720651260453716e-17 0.4023673367319081" rpy="0 0 0"/>
+    <mass value="122.80918209867345"/>
+    <inertia ixx="12.505573" iyy="16.746929" izz="11.768837" ixy="-0.0" iyz="0.0" ixz="-2.743569"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_1">
+  <inertial>
+    <origin xyz="-9.90529795258377e-06 0.04704068656167476 9.43689570931383e-16" rpy="0 0 0"/>
+    <mass value="8.402833582836633"/>
+    <inertia ixx="0.013886" iyy="0.021888" izz="0.013887" ixy="3e-06" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.2475 0.265 -0.076" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.2475 0.265 -0.076" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_1">
+  <inertial>
+    <origin xyz="9.905297963352933e-06 -0.04704068656167476 9.43689570931383e-16" rpy="0 0 0"/>
+    <mass value="8.402833582836633"/>
+    <inertia ixx="0.013886" iyy="0.021888" izz="0.013887" ixy="3e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.2475 -0.265 -0.076" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.2475 -0.265 -0.076" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_caster_part_1_1">
+  <inertial>
+    <origin xyz="0.0 0.0 -0.00799999999999998" rpy="0 0 0"/>
+    <mass value="0.24661502330679866"/>
+    <inertia ixx="4.4e-05" iyy="4.4e-05" izz="7.7e-05" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.28 0.2 -0.116" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/right_caster_part_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.28 0.2 -0.116" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/right_caster_part_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_caster_part_2_1">
+  <inertial>
+    <origin xyz="-0.03222572045994965 4.996003610813204e-16 -0.02321312390143325" rpy="0 0 0"/>
+    <mass value="0.6353484712483609"/>
+    <inertia ixx="0.000694" iyy="0.000767" izz="0.000821" ixy="-0.0" iyz="0.0" ixz="-0.000122"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.28 0.2 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/right_caster_part_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.28 0.2 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/right_caster_part_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_caster_wheel_1">
+  <inertial>
+    <origin xyz="0.0 0.024999999999999994 9.71445146547012e-17" rpy="0 0 0"/>
+    <mass value="2.443543855931531"/>
+    <inertia ixx="0.001705" iyy="0.002428" izz="0.001705" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.33 0.225 -0.045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/right_caster_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.33 0.225 -0.045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/right_caster_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_caster_part_1_1">
+  <inertial>
+    <origin xyz="-5.551115123125783e-17 5.551115123125783e-17 -0.008000000000000146" rpy="0 0 0"/>
+    <mass value="0.24661502330679866"/>
+    <inertia ixx="4.4e-05" iyy="4.4e-05" izz="7.7e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.28 -0.2 -0.116" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/left_caster_part_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.28 -0.2 -0.116" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/left_caster_part_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_caster_part_2_1">
+  <inertial>
+    <origin xyz="-0.0322257204599497 -5.828670879282072e-16 -0.02321312390143318" rpy="0 0 0"/>
+    <mass value="0.6353484712483609"/>
+    <inertia ixx="0.000694" iyy="0.000767" izz="0.000821" ixy="0.0" iyz="-0.0" ixz="-0.000122"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.28 -0.2 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/left_caster_part_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.28 -0.2 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/left_caster_part_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_caster_wheel_1">
+  <inertial>
+    <origin xyz="1.1102230246251565e-16 -0.024999999999999994 8.326672684688674e-17" rpy="0 0 0"/>
+    <mass value="2.443543855931531"/>
+    <inertia ixx="0.001705" iyy="0.002428" izz="0.001705" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.33 -0.225 -0.045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/left_caster_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.33 -0.225 -0.045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/left_caster_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="imu_1">
+  <inertial>
+    <origin xyz="0.0025000000000000022 1.4135798584282317e-18 1.1102230246251565e-16" rpy="0 0 0"/>
+    <mass value="0.01233075116533992"/>
+    <inertia ixx="1e-06" iyy="0.0" izz="0.0" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.375 -0.0 -0.571" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/imu_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.375 -0.0 -0.571" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/imu_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_1">
+  <inertial>
+    <origin xyz="0.012500000000000011 -1.5103477475751965e-13 1.1102230246251565e-16" rpy="0 0 0"/>
+    <mass value="0.4271802376525143"/>
+    <inertia ixx="0.000429" iyy="4.5e-05" izz="0.000429" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.375 -0.0 -0.571" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.375 -0.0 -0.571" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin xyz="2.6645352591003757e-15 3.289785852342063e-17 0.0050000000000001155" rpy="0 0 0"/>
+    <mass value="0.15259304567108165"/>
+    <inertia ixx="2.5e-05" iyy="2.5e-05" izz="4.8e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.285 -0.0 -0.611" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.285 -0.0 -0.611" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link3_1">
+  <inertial>
+    <origin xyz="-0.051142738703755464 4.0397517393967134e-13 0.01475806682339087" rpy="0 0 0"/>
+    <mass value="1.9656169541020214"/>
+    <inertia ixx="0.003791" iyy="0.004814" izz="0.004679" ixy="0.0" iyz="-0.0" ixz="0.000672"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.375 -0.0 -1.317" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/link3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.375 -0.0 -1.317" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/link3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="palm_1">
+  <inertial>
+    <origin xyz="-0.011448466162556459 0.0004901571166414636 0.10296443552390278" rpy="0 0 0"/>
+    <mass value="4.1566068946079335"/>
+    <inertia ixx="0.029141" iyy="0.020164" izz="0.010469" ixy="-0.000527" iyz="0.003192" ixz="-0.000823"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.4335 -0.0 -1.7805" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/palm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.4335 -0.0 -1.7805" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/palm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_base_link_1">
+  <inertial>
+    <origin xyz="0.0012535955018752598 -2.069857607036337e-16 0.016880943454350095" rpy="0 0 0"/>
+    <mass value="4.415971366531325"/>
+    <inertia ixx="0.010003" iyy="0.009958" izz="0.017765" ixy="0.0" iyz="-0.0" ixz="3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.285 -0.0 -0.856" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/arm_base_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.285 -0.0 -0.856" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/arm_base_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link1_1">
+  <inertial>
+    <origin xyz="0.012757531934531774 1.218640869423519e-12 0.06719265641075811" rpy="0 0 0"/>
+    <mass value="3.0929952957501237"/>
+    <inertia ixx="0.011232" iyy="0.011123" izz="0.009013" ixy="0.0" iyz="0.0" ixz="-0.001286"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.285 -0.0 -0.917" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.285 -0.0 -0.917" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link2_1">
+  <inertial>
+    <origin xyz="0.07202168862575331 -3.5313629523581563e-12 0.14450019168182338" rpy="0 0 0"/>
+    <mass value="15.846338073110624"/>
+    <inertia ixx="0.132567" iyy="0.13402" izz="0.029131" ixy="-0.0" iyz="-0.0" ixz="-0.007531"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.356 -0.0 -1.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.356 -0.0 -1.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link4_1">
+  <inertial>
+    <origin xyz="0.0026933234512468984 3.8855923862654855e-08 0.08440714552064343" rpy="0 0 0"/>
+    <mass value="7.842285748942116"/>
+    <inertia ixx="0.033994" iyy="0.034351" izz="0.010735" ixy="-0.0" iyz="-0.0" ixz="-0.003025"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.305 -0.0 -1.373" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/link4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.305 -0.0 -1.373" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/link4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link5_1">
+  <inertial>
+    <origin xyz="0.05596025373496882 -2.0965830246475977e-07 0.016043221095647597" rpy="0 0 0"/>
+    <mass value="1.4488766384865912"/>
+    <inertia ixx="0.002409" iyy="0.003275" izz="0.003165" ixy="0.0" iyz="0.0" ixz="-0.000572"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.3585 -0.0 -1.577" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/link5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.3585 -0.0 -1.577" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/link5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link6_1">
+  <inertial>
+    <origin xyz="0.0001043343737502922 -0.005286826016070152 0.07445480614360811" rpy="0 0 0"/>
+    <mass value="1.2273340069715037"/>
+    <inertia ixx="0.004651" iyy="0.004904" izz="0.001868" ixy="-1e-06" iyz="2.6e-05" ixz="6e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.4335 -0.0 -1.6305" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/link6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.4335 -0.0 -1.6305" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_mobile_description/meshes/link6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="joint_right_wheel" type="continuous">
+  <origin xyz="0.2475 -0.265 0.076" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="joint_left_wheel" type="continuous">
+  <origin xyz="0.2475 0.265 0.076" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="joint_caster_right_1" type="continuous">
+  <origin xyz="-0.28 -0.2 0.116" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_caster_part_1_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="joint_caster_right_2" type="continuous">
+  <origin xyz="0.0 0.0 -0.016" rpy="0 0 0"/>
+  <parent link="right_caster_part_1_1"/>
+  <child link="right_caster_part_2_1"/>
+  <axis xyz="0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="joint_caster_right_3" type="continuous">
+  <origin xyz="-0.05 -0.025 -0.055" rpy="0 0 0"/>
+  <parent link="right_caster_part_2_1"/>
+  <child link="right_caster_wheel_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="joint_caster_left_1" type="continuous">
+  <origin xyz="-0.28 0.2 0.116" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_caster_part_1_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="joint_caster_left_2" type="continuous">
+  <origin xyz="0.0 0.0 -0.016" rpy="0 0 0"/>
+  <parent link="left_caster_part_1_1"/>
+  <child link="left_caster_part_2_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="joint_caster_left_3" type="continuous">
+  <origin xyz="-0.05 0.025 -0.055" rpy="0 0 0"/>
+  <parent link="left_caster_part_2_1"/>
+  <child link="left_caster_wheel_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="fixed_imu" type="fixed">
+  <origin xyz="0.375 0.0 0.571" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="imu_1"/>
+</joint>
+
+<joint name="fixed_camera" type="fixed">
+  <origin xyz="0.375 0.0 0.571" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="camera_1"/>
+</joint>
+
+<joint name="joint_lidar" type="continuous">
+  <origin xyz="0.285 0.0 0.611" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="joint3" type="continuous">
+  <origin xyz="0.019 0.0 0.31" rpy="0 0 0"/>
+  <parent link="link2_1"/>
+  <child link="link3_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="fixed_hand_link6" type="fixed">
+  <origin xyz="0.0 0.0 0.15" rpy="0 0 0"/>
+  <parent link="link6_1"/>
+  <child link="palm_1"/>
+</joint>
+
+<joint name="fixed_arm" type="fixed">
+  <origin xyz="0.285 0.0 0.856" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="arm_base_link_1"/>
+</joint>
+
+<joint name="joint1" type="continuous">
+  <origin xyz="0.0 0.0 0.061" rpy="0 0 0"/>
+  <parent link="arm_base_link_1"/>
+  <child link="link1_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="joint2" type="continuous">
+  <origin xyz="0.071 0.0 0.09" rpy="0 0 0"/>
+  <parent link="link1_1"/>
+  <child link="link2_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="joint4" type="continuous">
+  <origin xyz="-0.07 0.0 0.056" rpy="0 0 0"/>
+  <parent link="link3_1"/>
+  <child link="link4_1"/>
+  <axis xyz="0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="joint5" type="continuous">
+  <origin xyz="0.0535 0.0 0.204" rpy="0 0 0"/>
+  <parent link="link4_1"/>
+  <child link="link5_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="joint6" type="continuous">
+  <origin xyz="0.075 0.0 0.0535" rpy="0 0 0"/>
+  <parent link="link5_1"/>
+  <child link="link6_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+
+<link name="camera_link"/>
+<joint name="realsense_to_urdf_camera_link" type="fixed">
+  <parent link="camera_1"/> 
+  <child link="camera_link"/> 
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+</joint>
+
+
+<link name="camera_gyro_frame"/>
+<joint name="9250_to_urdf_imu_link" type="fixed">
+  <parent link="camera_link"/>
+  <child link="camera_gyro_frame"/> 
+  <origin xyz="0 0 -0.571" rpy="0 0 0"/>
+</joint>
+
+<link name="camera_imu_optical_frame"/>
+<joint name="aaaaaa" type="fixed">
+  <parent link="camera_gyro_frame"/>
+  <child link="camera_imu_optical_frame"/> 
+  <origin xyz="0 0 -0.0" rpy="0 0 0"/>
+</joint>
+
+
+
+
+<link name="laser"/>
+<joint name="laser_to_urdf_lidar_link" type="fixed">
+  <parent link="lidar_1"/>
+  <child link="laser"/>
+  <origin xyz="0 0 0.0" rpy="0 0 0"/>
+</joint>
+
+
+<link name="base_footprint"/>
+<joint name="baselink_to_basefoorprint" type="fixed">
+  <parent link="base_footprint"/>
+  <child link="base_link"/>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <!-- <origin xyz="-0.04 0 0" rpy="0 0 0"/> -->
+</joint>
+
+</robot>

@@ -1,0 +1,25 @@
+<launch>
+
+
+      
+  <group ns="real">
+    <param name="robot_description"
+      command="$(find xacro)/xacro --inorder $(find mk_description)/urdf/mk_real.xacro" />
+
+    <node name="joint_state_publisher_gui"
+          pkg="joint_state_publisher_gui"
+          type="joint_state_publisher_gui"/>
+
+    <node name="robot_state_publisher"
+          pkg="robot_state_publisher"
+          type="robot_state_publisher"
+          output="screen"/>
+
+
+    <node pkg="tf2_ros" type="static_transform_publisher" name="tf_world_to_sim"
+        args="0 0 0 0 0 0 world real_base_link" />
+    
+  </group>
+  <node name="rviz" pkg="rviz" type="rviz"
+          args="-d $(find mk_description)/rviz/mk_description.rviz"/>
+</launch>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- MoveIt options -->
+  <arg name="pipeline" default="ompl" doc="Planning pipeline to use with MoveIt"/>
+
+  <!-- Gazebo options -->
+  <arg name="gazebo_gui" default="true" doc="Start Gazebo GUI"/>
+  <arg name="paused" default="false" doc="Start Gazebo paused"/>
+  <arg name="world_name" default="worlds/empty.world" doc="Gazebo world file"/>
+  <arg name="world_pose" default="-x 0 -y 0 -z 0 -R 0 -P 0 -Y 0" doc="Pose to spawn the robot at"/>
+
+  <!-- Launch Gazebo and spawn the robot -->
+  <include file="$(dirname)/gazebo.launch" pass_all_args="true"/>
+
+  <!-- Launch MoveIt -->
+  <include file="$(dirname)/demo.launch" pass_all_args="true">
+    <!-- robot_description is loaded by gazebo.launch, to enable Gazebo features -->
+    <arg name="load_robot_description" value="false" />
+    <arg name="moveit_controller_manager" value="ros_control" />
+  </include>
+
+  <node pkg="hproject_pkg" type="hand_jointstate_gazebo.py" name="hand_jointstate" output="screen"/>
+  <node pkg="hproject_pkg" type="angle_sensor_pub.py" name="angle_sensor_pub" output="screen"/>
+  <!-- <node pkg="hproject_pkg" type="kdl_ik_solver.py" name="ik_node" output="screen"/> -->
+  <node pkg="hproject_pkg" type="switch_node.py" name="switch_node" output="screen"/>
+  <node pkg="hproject_pkg" type="publish_posestamped.py" name="fusuion_pose_node" output="screen"/>
+  <node pkg="hproject_pkg" type="gui.py" name="gui_node" output="screen"/>
+
+  <node pkg="hproject_pkg" type="wrist_detect.py" name="wrist_detect_node" output="screen"/>
+  <node pkg="hproject_pkg" type="ebium.py" name="imu_node" output="screen"/>
+  <node pkg="hproject_pkg" type="imu_reset_node.py" name="imu_reset_node" output="screen"/>
+</launch>

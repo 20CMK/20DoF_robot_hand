@@ -1,0 +1,869 @@
+<?xml version="1.0" ?>
+<robot name="mk" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find mk_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find mk_description)/urdf/mk.trans" />
+<xacro:include filename="$(find mk_description)/urdf/mk.gazebo" />
+
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.001253595501875241 -2.425128974916387e-16 0.016880943454350202" rpy="0 0 0"/>
+    <mass value="4.415971366531325"/>
+    <inertia ixx="0.010003" iyy="0.009958" izz="0.017765" ixy="0.0" iyz="-0.0" ixz="3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link1_1">
+  <inertial>
+    <origin xyz="0.012757531934532012 1.2186053422867295e-12 0.06719265641075811" rpy="0 0 0"/>
+    <mass value="3.0929952957501237"/>
+    <inertia ixx="0.011232" iyy="0.011123" izz="0.009013" ixy="0.0" iyz="0.0" ixz="-0.001286"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.061" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.061" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link2_1">
+  <inertial>
+    <origin xyz="0.07202168862575391 -3.5313984794949443e-12 0.1445001916818219" rpy="0 0 0"/>
+    <mass value="15.846338073110624"/>
+    <inertia ixx="0.132567" iyy="0.13402" izz="0.029131" ixy="-0.0" iyz="-0.0" ixz="-0.007531"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.071 -0.0 -0.151" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.071 -0.0 -0.151" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link3_1">
+  <inertial>
+    <origin xyz="-0.05114273870375564 4.038438904121806e-13 0.014758066823390759" rpy="0 0 0"/>
+    <mass value="1.9656169541020214"/>
+    <inertia ixx="0.003791" iyy="0.004814" izz="0.004679" ixy="0.0" iyz="-0.0" ixz="0.000672"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.09 0.0 -0.461" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/link3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.09 0.0 -0.461" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/link3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link4_1">
+  <inertial>
+    <origin xyz="0.002693323451248456 3.8855923684264276e-08 0.08440714552064266" rpy="0 0 0"/>
+    <mass value="7.842285748942116"/>
+    <inertia ixx="0.033994" iyy="0.034351" izz="0.010735" ixy="-0.0" iyz="-0.0" ixz="-0.003025"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.02 -0.0 -0.517" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/link4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.02 -0.0 -0.517" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/link4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link5_1">
+  <inertial>
+    <origin xyz="0.0559602537349705 -2.0965830206548403e-07 0.016043221095647042" rpy="0 0 0"/>
+    <mass value="1.4488766384865912"/>
+    <inertia ixx="0.002409" iyy="0.003275" izz="0.003165" ixy="0.0" iyz="0.0" ixz="-0.000572"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0735 -0.0 -0.721" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/link5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0735 -0.0 -0.721" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/link5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link6_1">
+  <inertial>
+    <origin xyz="0.00010433437375184651 -0.005286826016069605 0.07445480614360678" rpy="0 0 0"/>
+    <mass value="1.2273340069715037"/>
+    <inertia ixx="0.004651" iyy="0.004904" izz="0.001868" ixy="-1e-06" iyz="2.6e-05" ixz="6e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.1485 -0.0 -0.7745" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/link6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.1485 -0.0 -0.7745" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/link6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="palm_1">
+  <inertial>
+    <origin xyz="-0.01849799368570129 -0.003288621708244126 0.05472215474509601" rpy="0 0 0"/>
+    <mass value="2.044043856185231"/>
+    <inertia ixx="0.004173" iyy="0.002907" izz="0.001986" ixy="-3.9e-05" iyz="0.000149" ixz="0.000254"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.1485 -0.0 -0.9245" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/palm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.1485 -0.0 -0.9245" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/palm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="index_1_1">
+  <inertial>
+    <origin xyz="-0.012003156274217913 -0.0001843174038660758 0.015503517151384427" rpy="0 0 0"/>
+    <mass value="0.04748136367345911"/>
+    <inertia ixx="7e-06" iyy="1e-05" izz="8e-06" ixy="1e-06" iyz="1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.143105 -0.038906 -1.029721" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/index_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.143105 -0.038906 -1.029721" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/index_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="middle_1_1">
+  <inertial>
+    <origin xyz="-0.011873129755786943 -0.003344684606072878 0.015242306952340856" rpy="0 0 0"/>
+    <mass value="0.04748136367345911"/>
+    <inertia ixx="7e-06" iyy="9e-06" izz="8e-06" ixy="1e-06" iyz="1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.142823 -0.007655 -1.033686" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/middle_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.142823 -0.007655 -1.033686" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/middle_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ring_1_1">
+  <inertial>
+    <origin xyz="-0.01177642870038545 -0.006392943751630707 0.01431467736832781" rpy="0 0 0"/>
+    <mass value="0.04748136367345911"/>
+    <inertia ixx="7e-06" iyy="9e-06" izz="9e-06" ixy="1e-06" iyz="2e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.14332 0.0242 -1.031634" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/ring_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.14332 0.0242 -1.031634" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/ring_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pinky_1_1">
+  <inertial>
+    <origin xyz="-0.011710261878068423 -0.00918021492423643 0.01276899388554198" rpy="0 0 0"/>
+    <mass value="0.04748136367345911"/>
+    <inertia ixx="7e-06" iyy="8e-06" izz="9e-06" ixy="1e-06" iyz="1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.144438 0.053842 -1.022516" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/pinky_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.144438 0.053842 -1.022516" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/pinky_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="index_2_1">
+  <inertial>
+    <origin xyz="0.0013592426070857533 0.014112910707545577 0.006584417463850301" rpy="0 0 0"/>
+    <mass value="0.1282452686281743"/>
+    <inertia ixx="2.4e-05" iyy="2.2e-05" izz="1.1e-05" ixy="-0.0" iyz="1e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.13696 -0.030659 -1.064498" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/index_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.13696 -0.030659 -1.064498" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/index_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="index_3_1">
+  <inertial>
+    <origin xyz="0.001359142984049877 0.014112479821706991 0.006584419644577233" rpy="0 0 0"/>
+    <mass value="0.1282452686281743"/>
+    <inertia ixx="2.4e-05" iyy="2.2e-05" izz="1.1e-05" ixy="-0.0" iyz="1e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.140923 -0.037336 -1.102207" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/index_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.140923 -0.037336 -1.102207" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/index_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="index_4_1">
+  <inertial>
+    <origin xyz="0.0012067405325764669 0.014773830435752318 0.0046425218728198825" rpy="0 0 0"/>
+    <mass value="0.1185904893413169"/>
+    <inertia ixx="1.7e-05" iyy="1.5e-05" izz="1e-05" ixy="-0.0" iyz="-1e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.144886 -0.044012 -1.139916" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/index_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.144886 -0.044012 -1.139916" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/index_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="middle_2_1">
+  <inertial>
+    <origin xyz="0.0009410365815004373 0.012755743075373938 0.008986834760588147" rpy="0 0 0"/>
+    <mass value="0.1282452686281743"/>
+    <inertia ixx="2.4e-05" iyy="2.1e-05" izz="1.1e-05" ixy="0.0" iyz="2e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.137217 0.006845 -1.066452" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/middle_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.137217 0.006845 -1.066452" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/middle_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="middle_3_1">
+  <inertial>
+    <origin xyz="0.0009403824173050968 0.012755743075381711 0.008986927732266725" rpy="0 0 0"/>
+    <mass value="0.1282452686281743"/>
+    <inertia ixx="2.4e-05" iyy="2.1e-05" izz="1.1e-05" ixy="0.0" iyz="2e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.141242 0.006845 -1.104741" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/middle_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.141242 0.006845 -1.104741" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/middle_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="middle_4_1">
+  <inertial>
+    <origin xyz="0.0007519472486991197 0.013745528207874521 0.007193841713581728" rpy="0 0 0"/>
+    <mass value="0.1185904893413169"/>
+    <inertia ixx="1.7e-05" iyy="1.5e-05" izz="9e-06" ixy="-0.0" iyz="-0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.145266 0.006845 -1.14303" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/middle_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.145266 0.006845 -1.14303" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/middle_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ring_2_1">
+  <inertial>
+    <origin xyz="0.0004933103936223815 0.010978865647973998 0.01111737284077896" rpy="0 0 0"/>
+    <mass value="0.1282452686281743"/>
+    <inertia ixx="2.4e-05" iyy="2e-05" izz="1.2e-05" ixy="1e-06" iyz="4e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.138159 0.044474 -1.061258" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/ring_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.138159 0.044474 -1.061258" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/ring_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ring_3_1">
+  <inertial>
+    <origin xyz="0.0004932107705865052 0.010978296533827897 0.011117375021508336" rpy="0 0 0"/>
+    <mass value="0.1282452686281743"/>
+    <inertia ixx="2.4e-05" iyy="2e-05" izz="1.2e-05" ixy="1e-06" iyz="4e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.142122 0.05115 -1.098967" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/ring_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.142122 0.05115 -1.098967" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/ring_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ring_4_1">
+  <inertial>
+    <origin xyz="0.00027360763069000926 0.012264850963387482 0.0095272488413789" rpy="0 0 0"/>
+    <mass value="0.1185904893413169"/>
+    <inertia ixx="1.7e-05" iyy="1.5e-05" izz="9e-06" ixy="0.0" iyz="1e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.146085 0.057827 -1.136676" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/ring_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.146085 0.057827 -1.136676" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/ring_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pinky_2_1">
+  <inertial>
+    <origin xyz="2.2107880944283176e-05 0.008666033434462497 0.012814334487809775" rpy="0 0 0"/>
+    <mass value="0.1282452686281743"/>
+    <inertia ixx="2.4e-05" iyy="1.8e-05" izz="1.4e-05" ixy="1e-06" iyz="5e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.139636 0.079177 -1.048017" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/pinky_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.139636 0.079177 -1.048017" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/pinky_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pinky_3_1">
+  <inertial>
+    <origin xyz="8.091020338218957e-06 0.008852933732520829 0.012884042204742041" rpy="0 0 0"/>
+    <mass value="0.1282452686281743"/>
+    <inertia ixx="2.4e-05" iyy="1.8e-05" izz="1.4e-05" ixy="1e-06" iyz="5e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.143427 0.092468 -1.083951" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/pinky_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.143427 0.092468 -1.083951" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/pinky_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pinky_4_1">
+  <inertial>
+    <origin xyz="-0.00023699550517802814 0.010392110335995783 0.01154159751508299" rpy="0 0 0"/>
+    <mass value="0.1185904893413169"/>
+    <inertia ixx="1.7e-05" iyy="1.5e-05" izz="1e-05" ixy="0.0" iyz="2e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.147204 0.105572 -1.119955" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/pinky_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.147204 0.105572 -1.119955" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/pinky_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thumb_1_1">
+  <inertial>
+    <origin xyz="0.0033442043857143666 0.01920624215067031 -0.008254977053352541" rpy="0 0 0"/>
+    <mass value="0.04748136367345911"/>
+    <inertia ixx="9e-06" iyy="8e-06" izz="8e-06" ixy="-2e-06" iyz="1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.15275 -0.011386 -0.962857" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/thumb_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.15275 -0.011386 -0.962857" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/thumb_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thumb_2_1">
+  <inertial>
+    <origin xyz="-0.012756223295727287 0.008187679826243473 0.003822349671507075" rpy="0 0 0"/>
+    <mass value="0.1282452686281743"/>
+    <inertia ixx="2.1e-05" iyy="1.3e-05" izz="2.2e-05" ixy="-2e-06" iyz="-5e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.16725 -0.048841 -0.958255" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/thumb_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.16725 -0.048841 -0.958255" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/thumb_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thumb_3_1">
+  <inertial>
+    <origin xyz="-0.012756223295727565 0.0081875296271577 0.0038221527485170492" rpy="0 0 0"/>
+    <mass value="0.1282452686281743"/>
+    <inertia ixx="2.1e-05" iyy="1.3e-05" izz="2.2e-05" ixy="-2e-06" iyz="-5e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.16725 -0.083734 -0.974526" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/thumb_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.16725 -0.083734 -0.974526" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/thumb_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thumb_4_1">
+  <inertial>
+    <origin xyz="-0.013746008428213302 0.006554095628134901 0.00306021727433603" rpy="0 0 0"/>
+    <mass value="0.1185904893413169"/>
+    <inertia ixx="1.5e-05" iyy="1.1e-05" izz="1.6e-05" ixy="0.0" iyz="-3e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.16725 -0.118626 -0.990797" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/thumb_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.16725 -0.118626 -0.990797" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mk_description/meshes/thumb_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="joint1" type="continuous">
+  <origin xyz="0.0 0.0 0.061" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link1_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint2" type="continuous">
+  <origin xyz="0.071 0.0 0.09" rpy="0 0 0"/>
+  <parent link="link1_1"/>
+  <child link="link2_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint3" type="continuous">
+  <origin xyz="0.019 -0.0 0.31" rpy="0 0 0"/>
+  <parent link="link2_1"/>
+  <child link="link3_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint4" type="continuous">
+  <origin xyz="-0.07 0.0 0.056" rpy="0 0 0"/>
+  <parent link="link3_1"/>
+  <child link="link4_1"/>
+  <axis xyz="0.0 -0.0 -1.0"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint5" type="continuous">
+  <origin xyz="0.0535 0.0 0.204" rpy="0 0 0"/>
+  <parent link="link4_1"/>
+  <child link="link5_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint6" type="continuous">
+  <origin xyz="0.075 0.0 0.0535" rpy="0 0 0"/>
+  <parent link="link5_1"/>
+  <child link="link6_1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="fixed_hand_link6" type="fixed">
+  <origin xyz="0.0 0.0 0.15" rpy="0 0 0"/>
+  <parent link="link6_1"/>
+  <child link="palm_1"/>
+</joint>
+
+<joint name="joint_index_RT" type="continuous">
+  <origin xyz="-0.005395 0.038906 0.105221" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="index_1_1"/>
+  <axis xyz="-0.994109 0.051541 0.095347"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_middle_RT" type="continuous">
+  <origin xyz="-0.005677 0.007655 0.109186" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="middle_1_1"/>
+  <axis xyz="-0.994522 0.0 0.104528"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_ring_RT" type="continuous">
+  <origin xyz="-0.00518 -0.0242 0.107134" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="ring_1_1"/>
+  <axis xyz="-0.994109 -0.051541 0.095347"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_pinky_RT" type="continuous">
+  <origin xyz="-0.004062 -0.053842 0.098016" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="pinky_1_1"/>
+  <axis xyz="-0.992811 -0.098225 0.068401"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_index_MCP" type="continuous">
+  <origin xyz="-0.006145 -0.008247 0.034777" rpy="0 0 0"/>
+  <parent link="index_1_1"/>
+  <child link="index_2_1"/>
+  <axis xyz="0.033947 0.983499 -0.177701"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_index_PIP" type="continuous">
+  <origin xyz="0.003963 0.006677 0.037709" rpy="0 0 0"/>
+  <parent link="index_2_1"/>
+  <child link="index_3_1"/>
+  <axis xyz="0.033947 0.983499 -0.177701"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_index_DIP" type="continuous">
+  <origin xyz="0.003963 0.006676 0.037709" rpy="0 0 0"/>
+  <parent link="index_3_1"/>
+  <child link="index_4_1"/>
+  <axis xyz="0.033947 0.983499 -0.177701"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_middle_MCP" type="continuous">
+  <origin xyz="-0.005606 -0.0145 0.032766" rpy="0 0 0"/>
+  <parent link="middle_1_1"/>
+  <child link="middle_2_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_middle_PIP" type="continuous">
+  <origin xyz="0.004025 0.0 0.038289" rpy="0 0 0"/>
+  <parent link="middle_2_1"/>
+  <child link="middle_3_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_middle_DIP" type="continuous">
+  <origin xyz="0.004024 0.0 0.038289" rpy="0 0 0"/>
+  <parent link="middle_3_1"/>
+  <child link="middle_4_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_ring_MCP" type="continuous">
+  <origin xyz="-0.005161 -0.020274 0.029624" rpy="0 0 0"/>
+  <parent link="ring_1_1"/>
+  <child link="ring_2_1"/>
+  <axis xyz="-0.033947 0.983499 0.177701"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_ring_PIP" type="continuous">
+  <origin xyz="0.003963 -0.006676 0.037709" rpy="0 0 0"/>
+  <parent link="ring_2_1"/>
+  <child link="ring_3_1"/>
+  <axis xyz="-0.033947 0.983499 0.177701"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_ring_DIP" type="continuous">
+  <origin xyz="0.003963 -0.006677 0.037709" rpy="0 0 0"/>
+  <parent link="ring_3_1"/>
+  <child link="ring_4_1"/>
+  <axis xyz="-0.033947 0.983499 0.177701"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_pinky_MCP" type="continuous">
+  <origin xyz="-0.004802 -0.025335 0.025501" rpy="0 0 0"/>
+  <parent link="pinky_1_1"/>
+  <child link="pinky_2_1"/>
+  <axis xyz="-0.068575 0.935149 0.347555"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_pinky_PIP" type="continuous">
+  <origin xyz="0.003791 -0.013291 0.035934" rpy="0 0 0"/>
+  <parent link="pinky_2_1"/>
+  <child link="pinky_3_1"/>
+  <axis xyz="-0.068575 0.935149 0.347555"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_pinky_DIP" type="continuous">
+  <origin xyz="0.003777 -0.013104 0.036004" rpy="0 0 0"/>
+  <parent link="pinky_3_1"/>
+  <child link="pinky_4_1"/>
+  <axis xyz="-0.068575 0.935149 0.347555"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_thumb_CMC_1" type="continuous">
+  <origin xyz="0.00425 0.011386 0.038357" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="thumb_1_1"/>
+  <axis xyz="-0.0 0.422618 -0.906308"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_thumb_CMC_2" type="continuous">
+  <origin xyz="0.0145 0.037455 -0.004602" rpy="0 0 0"/>
+  <parent link="thumb_1_1"/>
+  <child link="thumb_2_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_thumb_MP" type="continuous">
+  <origin xyz="0.0 0.034893 0.016271" rpy="0 0 0"/>
+  <parent link="thumb_2_1"/>
+  <child link="thumb_3_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+<joint name="joint_thumb_IP" type="continuous">
+  <origin xyz="0.0 0.034892 0.016271" rpy="0 0 0"/>
+  <parent link="thumb_3_1"/>
+  <child link="thumb_4_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+  <dynamics damping="1.0" friction="1.0"/>
+</joint>
+
+
+<link name="world"/>
+<joint name="world_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="base_link"/>
+</joint>
+
+
+<xacro:macro name="control" params="joint">
+    <transmission name="${joint}_transmission">
+        <type>transmission_interface/SimpleTransmission</type>
+        <!-- The EffortJointInterface works best with Gazebo using torques to actuate the joints -->
+        <joint name="${joint}">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="${joint}_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+</xacro:macro>
+
+<xacro:control joint="joint1"/>
+<xacro:control joint="joint2"/>
+<xacro:control joint="joint3"/>
+<xacro:control joint="joint4"/>
+<xacro:control joint="joint5"/>
+<xacro:control joint="joint6"/>
+
+<!-- === Finger/Thumb transmissions (paste below joint1~6 controls) === -->
+<xacro:control joint="joint_index_RT"/>
+<xacro:control joint="joint_middle_RT"/>
+<xacro:control joint="joint_ring_RT"/>
+<xacro:control joint="joint_pinky_RT"/>
+
+<xacro:control joint="joint_index_MCP"/>
+<xacro:control joint="joint_index_PIP"/>
+<xacro:control joint="joint_index_DIP"/>
+
+<xacro:control joint="joint_middle_MCP"/>
+<xacro:control joint="joint_middle_PIP"/>
+<xacro:control joint="joint_middle_DIP"/>
+
+<xacro:control joint="joint_ring_MCP"/>
+<xacro:control joint="joint_ring_PIP"/>
+<xacro:control joint="joint_ring_DIP"/>
+
+<xacro:control joint="joint_pinky_MCP"/>
+<xacro:control joint="joint_pinky_PIP"/>
+<xacro:control joint="joint_pinky_DIP"/>
+
+<xacro:control joint="joint_thumb_CMC_1"/>
+<xacro:control joint="joint_thumb_CMC_2"/>
+<xacro:control joint="joint_thumb_MP"/>
+<xacro:control joint="joint_thumb_IP"/>
+
+
+</robot>

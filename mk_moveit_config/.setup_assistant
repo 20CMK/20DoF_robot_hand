@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: mk_description
+    relative_path: urdf/mk.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/mk.srdf
+  CONFIG:
+    author_name: mk
+    author_email: mk@naver.com
+    generated_timestamp: 1759840766

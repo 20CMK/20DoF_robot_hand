@@ -1,0 +1,17 @@
+base_local_planner:
+  base_local_planner: "base_local_planner/TrajectoryPlannerROS"
+
+  TrajectoryPlannerROS:
+    meter_scoring: true
+    max_vel_x: 0.3
+    min_vel_x: 0.1
+    max_rotational_vel: 1.0
+    min_in_place_rotational_vel: 0.3
+    acc_lim_theta: 1.5
+    acc_lim_x: 0.5
+    acc_lim_y: 0.0
+    holonomic_robot: false
+  
+    yaw_goal_tolerance: 0.1
+    xy_goal_tolerance: 0.15
+    latch_xy_goal_tolerance: true  #기존 true, false는 xy 계속 업데이트 하면서 yaw 맞추고, true는  xy도착 이후 더 업데이트 안하고 yaw만 바꾸는듯?
